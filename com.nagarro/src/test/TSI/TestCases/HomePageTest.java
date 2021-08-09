@@ -1,6 +1,5 @@
 package TestCases;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -18,19 +17,19 @@ import Pages.HomePage;
 
 public class HomePageTest extends BaseClass {
 
-	@BeforeTest
+	
 
 	public void openwebsite() throws IOException {
 
-		invokeDriver();
+		//invokeDriver();
 
-		Properties prop = new Properties();
+		//Properties prop = new Properties();
 
-		FileInputStream fis = new FileInputStream("C:/Users/rajnichauhan/eclipse-workspace/com.nagarro/src/test/TSI/config.properties");
+		//FileInputStream fis = new FileInputStream("C:/Users/rajnichauhan/eclipse-workspace/com.nagarro/src/test/TSI/config.properties");
 		
-		prop.load(fis);
-		String URL = prop.getProperty("url");
-		System.out.print(URL);
+		//prop.load(fis);
+		//String URL = prop.getProperty("url");
+		//System.out.print(URL);
 		
 		
 		
@@ -40,10 +39,10 @@ public class HomePageTest extends BaseClass {
 		// driver.findElement(HomePage.crossbtn).click();
 	}
 
-	private void invokeDriver() {
+	//private void invokeDriver() {
 		// TODO Auto-generated method stub
 		
-	}
+	//}
 
 	@Test 
 	public void validateTitle() {
@@ -51,6 +50,7 @@ public class HomePageTest extends BaseClass {
 
 	}
 
+	/*
 	@Test(dependsOnMethods = { "validateTitle" })
 	public void validateBSCregion() throws InterruptedException {
 
@@ -90,5 +90,6 @@ public class HomePageTest extends BaseClass {
 		Assert.assertEquals(driver.findElement(By.xpath("//span[@id='user-dropdown-trigger']")).getText(),"SIGN IN");
 		
 	}
+	*/
 
 }

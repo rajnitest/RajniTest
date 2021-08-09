@@ -21,18 +21,19 @@ public class BaseClass {
 				"C:\\Users\\rajnichauhan\\Documents\\Marksheet\\chromedriver_win32 (1)\\chromedriver.exe");
 
 		driver = new ChromeDriver();
+		driver.get("https://local.newyorksportsclubs.com");
 
-		FileInputStream fis = new FileInputStream("/com.nagarro/src/test/TSI/Config.properties");
+		FileInputStream fis = new FileInputStream("C:/Users/rajnichauhan/git/RajniTest/com.nagarro/src/test/TSI/Config/Config.properties");
 		// create Properties class object to access properties file
 		Properties prop = new Properties();
 		// load the properties file
 		prop.load(fis);
-
-		System.out.println(prop.getProperty("baseUrl"));
+		String driverPath = prop.getProperty("baseUrl");
+		System.out.println(driverPath);
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("baseUrl"));
+		//driver.get(prop.getProperty("baseUrl"));
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 	}

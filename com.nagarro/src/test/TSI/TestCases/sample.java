@@ -33,7 +33,7 @@ public class sample extends BaseClass {
 
 
 
-		invokeDriver();
+		//invokeDriver();
 		prop.getProperty("driverPath");
 		//driver.get("https://local.newyorksportsclubs.com");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
